@@ -1,0 +1,23 @@
+@mixin fontSize ($fontSize, $step) {
+ font-size: $fontSize;
+ line-height: $fontSize + $step;
+}
+
+.logo {
+ @include fontSize(25px, 5);
+ font-family: 'Proxima Nova Th';
+ font-weight: 700;
+}
+
+.logo a {
+ font-family: 'Proxima Nova Th';
+ font-weight: 700;
+ @include fontSize(25px, 5);
+ color: #333D51;
+ &:hover {
+  color: #004FEC;
+ }
+ &:not(:first-child) {
+  margin-left: 35px;
+ }
+}

@@ -1,0 +1,54 @@
+$jusContent: space-between !default;
+
+@mixin flexible ($jusContent) {
+ display: flex;
+ justify-content: $jusContent;
+}
+@mixin width ($width) {
+ max-width: $width;
+ width: 100%;
+}
+@mixin fontSize ($fontSize, $step) {
+ font-size: $fontSize;
+ line-height: $fontSize + $step;
+}
+.section__news__details {
+ @include flexible ($jusContent)
+}
+.details__title {
+}
+.details__title .news__title {
+ @include width (350px);
+ @include fontSize (60px, 12);
+ overflow-wrap: anywhere;
+}
+.details__content {
+ @include width (730px);
+}
+
+.details__content__image img {
+ @include width (730px);
+ height: 380px;
+ margin-bottom: 60px;
+}
+
+.details__title .news__info {
+ flex-direction: column;
+ text-align: start;
+ direction: rtl;
+}
+
+.details__title .news__title, .details__title .news__url {
+ margin-bottom: 30px;
+}
+
+.details__content__text {
+ @include fontSize (25px, 10)
+}
+
+.details__title .last__world {
+ text-transform: none;
+}
+.details__title .news__data {
+ display: block;
+}

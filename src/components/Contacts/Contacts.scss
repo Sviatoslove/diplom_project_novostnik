@@ -1,0 +1,71 @@
+@mixin width ($width) {
+ max-width: $width;
+ width: 100%;
+}
+
+@mixin fontSize ($fontSize, $step) {
+ font-size: $fontSize;
+ line-height: $fontSize + $step;
+}
+
+.section__contacts {
+ display: flex;
+}
+
+.author__link {
+ @include fontSize(60px, -4);
+ color: #004FEC;
+ letter-spacing: 1px;
+ &:hover {
+  text-decoration: underline;
+  color: #004FEC;
+ }
+}
+
+.author__name {
+ @include fontSize(25px, 5);
+ @include width(150px);
+ position: relative;
+ padding-left: 23px;
+ margin: 50px 0 25px;
+ &:after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 88%;
+  background-color: #004FEC;
+  top: 5px;
+  left: 0;
+ }
+}
+
+.author__email {
+ @include fontSize(20px, 0);
+ &:hover {
+  font-size: 22px;
+  color: #004FEC;
+  text-decoration: underline;
+ }
+}
+
+.author__employ {
+ @include fontSize(20px, 0);
+ color: #333d5180;
+ margin: 58px 0 30px;
+}
+
+.author__skills {
+ @include fontSize(20px, 0);
+ & span {
+  color: #004FEC;
+ }
+}
+
+.author__photo img{
+ width: 540px;
+ height: 340px;
+ object-fit: cover;
+ object-position: 0px -30px;
+ box-shadow: 10px 10px 20px 0px rgba(11, 11, 11, 0.3);
+ margin-left: 87px;
+}

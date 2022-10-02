@@ -1,0 +1,50 @@
+$jusContent: space-between !default;
+
+@mixin flexible ($jusContent) {
+ display: flex;
+ justify-content: $jusContent;
+ align-items: center;
+}
+@mixin fontSize ($fontSize, $step) {
+ font-size: $fontSize;
+ line-height: $fontSize + $step;
+}
+
+.container__outlet {
+ padding: 90px 0;
+ max-width: 1110px;
+ width: 100%;
+ margin: 0 auto;
+}
+
+.head {
+ @include flexible ($jusContent);
+ padding: 45px 0;
+}
+
+.menu {
+ @include flexible ($jusContent);
+}
+
+.menu a {
+ @include fontSize(18px, 4);
+ font-family: 'Proxima Nova Th';
+ font-weight: 400;
+ display: block;
+ color: #333D51;
+ &:hover {
+  color: #004FEC;
+ }
+ &:not(:first-child) {
+  margin-left: 35px;
+ }
+}
+
+a.active {
+ transform: scale(1.2);
+ color: #004FEC;
+ font-weight: bold;
+}
+
+
+

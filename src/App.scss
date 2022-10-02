@@ -1,0 +1,28 @@
+.App {
+  scroll-behavior: smooth;
+  color: #333D51;
+  font-family: 'Proxima Nova Th';
+  font-weight: 400;
+}
+.container {
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+}
+div, p, form, input, button, a, span, ul, li {
+  box-sizing: border-box;
+}
+p, h1 {
+  margin: 0;
+}
+a, a:hover {
+  text-decoration: none;
+  transition: all 0.7s ease 0.1s;
+  cursor: pointer;
+  color: #333D51;
+}
+ul, li {
+  display: block;
+  margin: 0;
+  padding: 0;
+}

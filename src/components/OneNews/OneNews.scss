@@ -1,0 +1,90 @@
+@mixin fontSize ($fontSize, $step) {
+ font-size: $fontSize;
+ line-height: $fontSize + $step;
+}
+@mixin flexible ($jusContent, $alignItems) {
+ display: flex;
+ justify-content: $jusContent;
+ align-items: $alignItems;
+}
+@mixin width ($width) {
+ max-width: $width;
+ width: 100%;
+}
+
+.news__item {
+ @include width(350px);
+ height: 290px;
+ padding: 24px 0;
+ display: flex;
+ flex-direction: column;
+ &:not(:nth-child(3n)){
+  margin-right: 30px;
+ }
+ &:not(:nth-child(n+4)){
+  margin-bottom: 30px;
+ }
+ & a {
+  margin-left: 25px;
+  @include width(300px);
+  @include fontSize (25px, 5);
+  display: block;
+  text-align: left;
+ }
+}
+
+.news__link__wrapper {
+ position: relative;
+ @include width(350px);
+ transition: background-color 0.5s ease 0.5s;
+ &:after {
+  position: absolute;
+  content: '';
+  top: 6px;
+  left: 1px;
+  width: 2px;
+  background-color: #004FEC;
+  height: 90%;
+ }
+ &:hover a{
+  color: #fff;
+ }
+ &:hover {
+  background-color: #004FEC;
+ }
+}
+
+.news__info {
+ @include width(300px);
+ @include flexible (space-between, end);
+ flex-grow: 1;
+}
+
+.news__url:hover {
+ text-decoration: underline;
+ font-size: 25px;
+ transition: all 1s ease;
+ color: #004FEC
+}
+
+.news__url, .news__slash, .news__month {
+ @include fontSize (20px, 4);
+ color: #333d5180;
+}
+
+.news__data {
+ @include flexible (space-between, end);
+}
+
+.news__day {
+ @include fontSize (30px, -1);
+}
+
+.news__aware {
+ @include fontSize (20px, 4);
+ color: #004FEC;
+ &:hover {
+  text-decoration: underline;
+  color: #004FEC;
+ }
+}

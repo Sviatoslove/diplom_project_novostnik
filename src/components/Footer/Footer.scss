@@ -1,0 +1,20 @@
+@mixin fontSize ($fontSize, $step) {
+ font-size: $fontSize;
+ line-height: $fontSize + $step;
+}
+footer .container {
+ padding: 45px 0;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.footer__content {
+ @include fontSize(12px, 3);
+}
+.footer__project {
+ @include fontSize(15px, 3);
+}
+.footer__logo span {
+ text-align: right;
+ display: block;
+}
