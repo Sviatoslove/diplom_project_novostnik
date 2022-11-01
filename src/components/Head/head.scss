@@ -1,5 +1,10 @@
 $jusContent: space-between !default;
 
+:root {
+ --color-bg: #333D51;
+ --color-active: #004FEC;
+}
+
 @mixin flexible ($jusContent) {
  display: flex;
  justify-content: $jusContent;
@@ -26,23 +31,23 @@ $jusContent: space-between !default;
  @include flexible ($jusContent);
 }
 
-.menu a {
+.menu > a {
  @include fontSize(18px, 4);
  font-family: 'Proxima Nova Th';
  font-weight: 400;
  display: block;
- color: #333D51;
+ color: var(--color-bg);
  &:hover {
-  color: #004FEC;
+  color: var(--color-active);
  }
  &:not(:first-child) {
   margin-left: 35px;
  }
 }
 
-a.active {
+a.nav-linkactive__my {
  transform: scale(1.2);
- color: #004FEC;
+ color: var(--color-active);
  font-weight: bold;
 }
 

@@ -9,7 +9,7 @@ const Footer = () => {
     <div>
      <Logo
       logo='Новостник'
-      url='/home'
+      url='/'
      />
      <span className="footer__content">
       Single Page Application

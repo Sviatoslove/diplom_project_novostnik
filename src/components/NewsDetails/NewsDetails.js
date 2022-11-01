@@ -30,7 +30,6 @@ const getLastWorld = str => {
   arr.forEach((item, idx) => {
     if(idx === arr.length - 1) {
       lastWorld = item
-      console.log(lastWorld)
     }else {
       finalArr.push(item)
       returnStr = finalArr.join(' ')

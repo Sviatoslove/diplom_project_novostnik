@@ -1,6 +1,7 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { Logo } from '../Logo/Logo';
 import { Footer } from '../Footer/Footer';
+import { CustomLink } from '../CustomLink/CustomLink'
 import './head.scss';
 
 const Head = () => {
@@ -11,12 +12,12 @@ const Head = () => {
         <div className='head'>
           <Logo 
             logo={'Новостник'}
-            url='/home'
+            url='/'
           />
           <div className="menu">
-            <NavLink to="/home">Главная</NavLink>
-            <NavLink to="/news">Новости</NavLink>
-            <NavLink to="/contacts">Контакты</NavLink>
+            <CustomLink to="/" children="Главная"/>
+            <CustomLink to="/news" children="Новости"/>
+            <CustomLink to="/contacts" children="Контакты"/>
           </div>
         </div>
       </div>
@@ -31,5 +32,3 @@ const Head = () => {
 }
 
 export {Head}
-
-// сделать HeadItem!

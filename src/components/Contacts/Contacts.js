@@ -6,14 +6,14 @@ const Contacts = () => {
  return (
   <div className="section__contacts">
     <div className="author">
-      <a className="author__link" href="tel:+79107374799">
-        +7 (910) 737 47 99
+      <a className="author__link" href="tel:+79967537913">
+        +7 (996) 753 79 13
       </a>
       <h2 className="author__name">
         Святослав Попов
       </h2>
-      <a className="author__email" href="mailto:svyatpopov86@gmail.com">
-        svyatpopov86@gmail.com
+      <a className="author__email" href="mailto:vanasvyatee@gmail.com">
+        vanasvyatee@gmail.com
       </a>
       <p className="author__employ">
         JavaScript разработчик
